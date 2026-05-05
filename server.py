@@ -33,6 +33,8 @@ mcp = FastMCP(
     "data_gov_il_mcp",
     host=os.getenv("MCP_HOST", "0.0.0.0"),
     port=int(os.getenv("PORT", os.getenv("MCP_PORT", "8000"))),
+    stateless_http=True,
+    json_response=True,
 )
 
 
